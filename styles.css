@@ -1,0 +1,95 @@
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Kavoon&family=Noto+Sans:wght@600;900&family=Open+Sans:wght@300;600&family=Poppins&family=Roboto:wght@500&family=Rubik:wght@400;500&family=Signika:wght@600&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+  .topleft{
+    padding-left: 6%;;
+  }
+  .sideimg{
+    width: 100%!important;
+  }
+  .simgdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sothis{
+    padding: 100px 0;
+    background-image: url('drone3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -200px;
+    height: 100vh;
+    background-attachment: fixed;
+  }
+  
+  .transs2{
+    background: transparent !important;
+    border: none;
+   
+  }
+  .lia{
+    transition: all 0.5s ease;
+  }
+  .text-black{
+    color: rgb(23, 23, 23)!important;
+  }
+  
+  .gslogotext{
+    background: -webkit-linear-gradient(#0c5629, #00ff08);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      font-size: 2rem;
+      font-family: 'Roboto';
+  }
+  
+  .gallerydiv{
+    padding: 0 10rem;
+  }
+  
+.gimg{
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.gimg:hover .gname2{
+  display: block;
+  opacity: 1;
+  /* transition: all 0.4s ease-in-out; */
+}
+.gname2{
+  transition: all 0.4s linear;
+  opacity: 0;
+  position: absolute;
+  margin: 1% 1%;
+  background-color: white;
+  padding: 0.5% 1.5% 0.5% 2%;
+  border-radius: 6px;
+  color: #474747;
+  font-family: Roboto;
+}
+  
+  @media (max-width:767px){
+    .topleft{
+      padding: 0;
+    }
+    #navul{
+        background-color: white;
+    transition: all 0.5s ease-in-out;
+    }
+    .lia{
+        color: black!important;
+    }
+    .sothis{
+        background-position: 0;
+    }
+    .crftxt{
+        font-size: 130%;
+        font-family: Ubuntu;
+    }
+    .gallerydiv{
+      padding: 2rem;
+    }
+  
+    /* .sideimg{
+      width: 22rem;
+    } */
+  }
