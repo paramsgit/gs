@@ -66,16 +66,26 @@
   color: #474747;
   font-family: Roboto;
 }
+.active{
+  /* background-color: #1d4ed8; */
+  color: #1d4ed8!important;
+ 
+}
   
   @media (max-width:767px){
     .topleft{
       padding: 0;
     }
+    .active{
+      background-color: #1d4ed8;
+      color: white!important;
+    }
     #navul{
         background-color: white;
     transition: all 0.5s ease-in-out;
+    box-shadow: 2px 2px 5px darkgray;
     }
-    .lia{
+    .cbb{
         color: black!important;
     }
     .sothis{
@@ -89,7 +99,5 @@
       padding: 2rem;
     }
   
-    /* .sideimg{
-      width: 22rem;
-    } */
+    
   }

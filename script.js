@@ -32,3 +32,14 @@ function myInitCode() {
   });
 }
   
+
+function changeactive(id) {
+  console.log(id)
+  let alist=['al1','al2','al3','al4']
+  for(let i=0;i<4;i=i+1){
+    document.getElementById(alist[i]).classList.remove('active')
+    document.getElementById(alist[i]).classList.add('cbb')
+  }
+  document.getElementById(id).classList.add('active')
+    document.getElementById(id).classList.remove('cbb')
+}
