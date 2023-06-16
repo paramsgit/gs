@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> -->
-           <script src="https://cdn.tailwindcss.com"></script>
+           <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+           <link rel="stylesheet" href="TAILWIND/tailwind-all.css">
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
 <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" /> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
@@ -19,11 +20,16 @@
     <nav id="transs" class=" transparent fixed w-full z-20 top-0 left-0 dark:border-gray-600">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" class="flex items-center">
-            <img src="logo.png" class="h-8 mr-3" style="height: 2.5rem;" alt="Flowbite Logo"/>
+            <img src="files/logo.png" class="h-8 mr-3" style="height: 2.5rem;" alt="Flowbite Logo"/>
             <span class="self-center gslogotext">GS</span>
         </a>
         <div class="flex md:order-2">
-            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+            <button type="button" class="mailbtn text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" style="border-radius: 30px;" onclick="location.href='mailto:gsagriworks@outlook.com';" >
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+              </svg> -->
+              Reach Us
+          </button>
             <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" fill-rule="evenodd"></path></svg>
@@ -32,23 +38,23 @@
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
           <ul id="navul" class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg  md:flex-row md:space-x-8 md:mt-0 ">
             <li>
-              <a href="#" id="al1" class="active lia text-white block py-2 pl-3 pr-4 text-gray-900 rounded  " aria-current="page" onclick="changeactive(this.id)">Home</a>
+              <a href="#" id="al1" class="active lia text-white block py-2 pl-3 pr-4 rounded  "  onclick="changeactive(this.id)">Home</a>
             </li>
             <li>
-              <a href="#about" id="al2" class="lia cbb text-white block py-2 pl-3 pr-4 text-gray-900 rounded  " onclick="changeactive(this.id)">About</a>
+              <a href="#about" id="al2" class="lia cbb text-white block py-2 pl-3 pr-4 rounded  " onclick="changeactive(this.id)">About</a>
             </li>
             <li>
-              <a href="#projects" id="al3" class="lia cbb text-white block py-2 pl-3 pr-4 text-gray-900 rounded  " onclick="changeactive(this.id)">Services</a>
+              <a href="#projects" id="al3" class="lia cbb text-white block py-2 pl-3 pr-4 rounded  " onclick="changeactive(this.id)">Services</a>
             </li>
             <li>
-              <a href="#contact" id="al4" class="lia cbb text-white block py-2 pl-3 pr-4 text-gray-900 rounded " onclick="changeactive(this.id)">Contact</a>
+              <a href="#contact" id="al4" class="lia cbb text-white block py-2 pl-3 pr-4 rounded " onclick="changeactive(this.id)">Contact</a>
             </li>
           </ul>
         </div>
         </div>
       </nav>
 
-      <section >
+      <section id="home">
         <div class="thisissothis" >
             <div class='sothis'>
               <div class="topper">
@@ -65,8 +71,9 @@
                     Crafting Excellent Tools Since 2000
                     <br>Tools that Cultivate Success in Farming
                   </p>
-                  <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                    Subscribe
+                  <button class="flex mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-6 py-3 px-7 " style="align-items: center;" onclick="downloadb()">
+                    Brochure
+                    <img id="downloadgif" src="files/download.gif" width="20px" style="margin-left: 5px;" alt="">
                   </button>
                 </div>
                
@@ -92,7 +99,7 @@
               <div class="relative pl-16">
                 <dt class="text-base font-semibold leading-7 text-gray-900">
                   <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <img src="noun.png" alt="">
+                    <img src="files/noun.png" alt="">
                   </div>
                   Modern Machines
                 </dt>
@@ -204,7 +211,7 @@ Drill Bit Options.
                   </div>
                 </div>
                 <div class='simgdiv'>
-                <img src="driller.jpg" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 sideimg"  />
+                <img src="files/driller.jpg" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl sm:w-[57rem] md:-ml-4 lg:-ml-0 sideimg"  />
                 </div>
               </div>
             </div>
@@ -219,7 +226,7 @@ Drill Bit Options.
               <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                   <div class='simgdiv'>
-                    <img src="loader.jpg" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 sideimg"  />
+                    <img src="files/loader.jpg" class="w-[48rem] max-w-none rounded-xl shadow-xl sm:w-[57rem] md:-ml-4 lg:-ml-0 sideimg"  />
                     </div>
                   <div class="lg:pl-8 lg:pt-4">
                     <div class="lg:max-w-lg">
@@ -274,39 +281,40 @@ Drill Bit Options.
             
             </div>
       </section>
-<section id="gallery">
+
+<div id="gallery">
 
 <div class="gallerydiv">
   <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
     <div class="gimg">
       <div>
       <span class="gname2">Hay Baler</span></div>
-        <img class="h-auto max-w-full rounded-lg" src="hay.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="files/hay.jpg" alt="">
     </div>
     <div class="gimg">
       <div >
         <span class="gname2">Sprayer</span></div>
-        <img class="h-auto max-w-full rounded-lg" src="sprayer2.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="files/sprayer2.jpg" alt="">
     </div>
     <div class="gimg">
       <div >
         <span class="gname2">Drone Sprayer</span></div>
-        <img class="h-auto max-w-full rounded-lg" src="drones.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="files/drones.jpg" alt="">
     </div>
     <div class="gimg">
       <div >
         <span class="gname2">Grading Machine</span></div>
-        <img class="h-auto max-w-full rounded-lg" src="grading.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="files/grading.jpg" alt="">
     </div>
     <div class="gimg">
       <div >
         <span class="gname2">Laser leveler</span></div>
-        <img class="h-auto max-w-full rounded-lg" src="ll.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="files/ll.jpg" alt="">
     </div>
     <div class="gimg">
       <div >
         <span class="gname2">Plough</span></div>
-        <img class="h-auto max-w-full rounded-lg" src="p1.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="files/p1.jpg" alt="">
     </div>
     
 
@@ -316,7 +324,7 @@ Drill Bit Options.
   
 
 
-</section>
+</div>
 
 <section id="contact">
   <div class="thalle">
@@ -329,7 +337,7 @@ Drill Bit Options.
         <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
 
           <div class="lg:pr-8 lg:pt-4">
-            <section class="bg-white ">
+            <div class="bg-white ">
               <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                   <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">Contact Us</h2>
                   <p class="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">
@@ -351,7 +359,7 @@ Drill Bit Options.
                       <button class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300" style="background-color: #047857;">Send message</button>
                   </form>
               </div>
-            </section>
+            </div>
           </div>
 
 
@@ -367,7 +375,7 @@ Drill Bit Options.
 
 </section>
 
-<section id="footer" style="">
+<div id="footer" style="">
   
 
   <footer class="bg-white rounded-lg shadow m-4">
@@ -393,7 +401,7 @@ Drill Bit Options.
 
 
 
-</section>
+</div>
 </div>
       <script src="script.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>

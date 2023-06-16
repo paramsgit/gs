@@ -43,3 +43,60 @@ function changeactive(id) {
   document.getElementById(id).classList.add('active')
     document.getElementById(id).classList.remove('cbb')
 }
+
+
+// Get all the navbar links
+const navbarLinks = document.querySelectorAll('nav ul li a');
+
+// Add scroll event listener
+window.addEventListener('scroll', () => {
+  // Get the current scroll position
+  const scrollPosition = window.scrollY;
+
+  // Check which section is in the viewport
+  const sections = document.querySelectorAll('section');
+  sections.forEach((section, index) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (
+      scrollPosition >= sectionTop &&
+      scrollPosition < sectionTop + sectionHeight
+    ) {
+      // Remove active state from all navbar links
+      navbarLinks.forEach((link) => {
+        link.classList.remove('active');
+        link.classList.add('cbb');
+      });
+
+      // Add active state to the corresponding navbar link
+      navbarLinks[index].classList.add('active');
+      navbarLinks[index].classList.remove('cbb');
+    }
+  });
+});
+
+function hidedb() {
+  document.getElementById('downloadgif').style.display='none'
+}
+
+function downloadb() {
+  document.getElementById('downloadgif').style.display='block'
+  setTimeout(hidedb,3000)
+  const fileUrl = 'files/final.pdf';
+  const fileName = 'Brochure.pdf';
+
+  // Create a temporary anchor element
+  const anchorElement = document.createElement('a');
+  anchorElement.href = fileUrl;
+  anchorElement.download = fileName;
+
+  // Programmatically click the anchor element
+  anchorElement.click();
+
+  // Clean up the temporary anchor element
+  anchorElement.remove();
+
+  // Prevent the default link behavior
+  return false;
+}
